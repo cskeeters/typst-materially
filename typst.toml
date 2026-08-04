@@ -10,6 +10,8 @@ keywords = ["Google Material Symbols"]
 categories = [ "text" ]
 compiler = "0.15.0"
 exclude = [
+  ".git",
+  ".gitignore",
   "demo.typ",
   "demo.pdf",
   "demo.png",
