@@ -1,19 +1,29 @@
-#import "@local/materially:0.1.0" as materially
+#import "@preview/materially:0.1.0" as materially
 
-#set text(3em, weight: 400)
+#set page(
+  width: 109pt,
+  height: 38pt,
+  margin: 5pt
+  // flipped: true, // Landscape
+)
 
-#let symbol = materially.init() // Default style is Outlined
-// #let symbol = materially.init(style:"Rounded")
-// #let symbol = materially.init(style:"Sharp")
+#let symbol = materially.init()
 
-#symbol("home") Home
+#let admonition-type(it) = {
+  text(.8em, weight: 700, font:("Roboto", "Helvetica", "Arial"), it)
+}
+#grid(
+  columns: (auto, 1fr),
+  column-gutter: 5pt,
 
-#symbol("info") Note
+  grid.cell(inset: (right: 5pt), stroke: (right:.5pt),
+    text(1.5em, symbol("info"))
+  ),
+  {
+    [
+      #admonition-type[NOTE]
 
-#symbol("lightbulb_2") Tip
-
-#symbol("announcement") Important
-
-#symbol("warning") Warning
-
-#symbol("report") Caution
+      You are special!
+    ]
+  }
+)
