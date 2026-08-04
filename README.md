@@ -1,5 +1,11 @@
 **Materially** is a [Typst](https://typst.app/) package that enables the use of [Google Material Symbols](https://github.com/google/material-design-icons).
 
+# Example
+
+[`demo.typ`](demo.typ) renders to:
+
+![Admonition demo showcasing Materially](demo.png)
+
 # Google Material Symbols
 
 - [Online Search](https://fonts.google.com/icons)
@@ -40,8 +46,6 @@ The `.ttf` fonts from the [variablefont](https://github.com/google/material-desi
     ```typst
     #symbol("menu")
     ```
-
-See [`demo.typ`](demo.typ) for a complete example.
 
 # Design
 
